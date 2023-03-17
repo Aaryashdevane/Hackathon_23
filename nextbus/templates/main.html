@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+
+<title>NextBus</title>
+<link rel="icon" href="logo.png">
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<link rel='stylesheet' type='text/css' media = 'screen' href ="{% static 'style/main.css' %}">  
+<style>
+    {% comment %} h1{
+        background-color:;
+    } {% endcomment %}
+    body{
+        background-color: #CCE1F2;
+        background:
+    }
+    .container1
+    {
+        background-color:rgb(34,166,142);
+    border-bottom-right-radius:30px;
+    border-bottom-left-radius:30px;
+    height:100px;
+    }
+  .container-fluid{
+    position:relative;
+    left:500px;
+}
+input {
+    width:400px;  
+    font-size:25px;
+}
+
+button{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan;
+    background-color:cyan;
+    font-size:25px;
+  }
+  button :hover{
+     box-shadow: 0 0 5px rgb(34, 166, 142),
+     0 0 25px cyan, 0 0 50px cyan,
+     0 0 100px cyan,0 0 200px cyan;
+  }
+.container{
+
+    position:relative;
+    left:1200px;
+    top:56px;
+    font-size:30px;
+}
+  .cont{
+    border: 2px solid black;
+    font-size:25px;
+  } 
+  .box1{
+    border : 2px solid black; 
+  }
+  .cont1{
+    font-size:25px;
+  }
+  .cont2{
+    font-size:25px;
+  }
+  .card{
+    width:50px;
+    position:relative;
+    left:500px;
+
+    border:2px solid black;
+    border-radius:20px;
+  }
+.cont3{
+    text-align:center;
+    border:3px solid black;
+    border-radius:20px;
+}
+</style>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    {% comment %} <div class="section">
+    <video autoplay loop muted>
+        <source src="video.mp4" type="video/ogg">
+    </video>
+</div> {% endcomment %}
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% comment %} <img src ="{% static 'images/logo.png' %}"/> {% endcomment %}
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
